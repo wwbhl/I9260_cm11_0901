@@ -27,11 +27,11 @@
 
     .prologue
     .line 33
-    const-string v2, "com.google.android.c2dm.intent.RECEIVE"
-    
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
+
+    const-string v3, "com.google.android.c2dm.intent.RECEIVE"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

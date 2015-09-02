@@ -33,9 +33,6 @@
 .method public abstract notifyANR(Lcom/android/server/input/InputApplicationHandle;Lcom/android/server/input/InputWindowHandle;Ljava/lang/String;)J
 .end method
 
-.method public abstract notifyBackLidSwitchChanged(JZ)V
-.end method
-
 .method public abstract notifyConfigurationChanged()V
 .end method
 

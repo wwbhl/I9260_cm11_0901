@@ -28,8 +28,6 @@
 
 .field mPid:I
 
-.field mSlotId:I
-
 .field mUid:I
 
 .field final synthetic this$0:Lcom/android/server/ConnectivityService;
@@ -104,13 +102,6 @@
     goto :goto_0
 .end method
 
-.method setSlotId(I)V
-    .locals 0
-    .prologue
-    iput p1, p0, Lcom/android/server/ConnectivityService$FeatureUser;->mSlotId:I
-
-    return-void
-.end method
 
 # virtual methods
 .method public binderDied()V
@@ -194,17 +185,15 @@
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/android/server/ConnectivityService$FeatureUser;->mSlotId:I
-
-    # invokes: Lcom/android/server/ConnectivityService;->stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
-    invoke-static {v0, p0, v1, v2}, Lcom/android/server/ConnectivityService;->access_stopUsingNetworkFeature(Lcom/android/server/ConnectivityService;Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
+    # invokes: Lcom/android/server/ConnectivityService;->stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;Z)I
+    invoke-static {v0, p0, v1}, Lcom/android/server/ConnectivityService;->access$400(Lcom/android/server/ConnectivityService;Lcom/android/server/ConnectivityService$FeatureUser;Z)I
 
     .line 1233
     return-void
 .end method
 
 .method public expire()V
-    .locals 3
+    .locals 2
 
     .prologue
     .line 1241
@@ -212,10 +201,8 @@
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/android/server/ConnectivityService$FeatureUser;->mSlotId:I
-
-    # invokes: Lcom/android/server/ConnectivityService;->stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
-    invoke-static {v0, p0, v1, v2}, Lcom/android/server/ConnectivityService;->access_stopUsingNetworkFeature(Lcom/android/server/ConnectivityService;Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
+    # invokes: Lcom/android/server/ConnectivityService;->stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;Z)I
+    invoke-static {v0, p0, v1}, Lcom/android/server/ConnectivityService;->access$400(Lcom/android/server/ConnectivityService;Lcom/android/server/ConnectivityService$FeatureUser;Z)I
 
     .line 1242
     return-void
